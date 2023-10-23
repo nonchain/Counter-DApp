@@ -22,7 +22,7 @@ export default function Home() {
   const [numberOfCounter, setNumberOfCounter] = useState(0);
 
   useEffect(() => {
-    setNumberOfCounter(counter.toNumber());
+    setNumberOfCounter(+Number(counter).toFixed());
   }, [counter]);
 
   const isOwner = owner === address;
